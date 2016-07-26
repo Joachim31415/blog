@@ -1,0 +1,14 @@
+<table width = '100%'>
+  <tr>
+    <th> title </th>
+    <th> text </th>
+  </tr>
+<% @entries.each do |entry| %>
+  <tr>
+    <td> <%= entry.title %> </td>
+    <td> <%= entry.text %> </td>
+  </tr>
+<% end %>
+</table>
+<p> number of entry: <%= @entries.count %> </p>
+<%= link_to('new blog', new_entry_path) %>
